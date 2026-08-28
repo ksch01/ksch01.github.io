@@ -22,7 +22,7 @@ import androidstudioIcon from "@/assets/icons/androidstudio.svg"
 import influxdbIcon from "@/assets/icons/influxdb.svg"
 import grafanaIcon from "@/assets/icons/grafana.svg"
 
-export const BASE_URL = "http://localhost:5173/"
+export const BASE_URL = "https://ksch01.github.io/"
 export const START_URL = BASE_URL.concat("#")
 export const PROJECTS_URL = BASE_URL.concat("#projects")
 export const EXPERIENCE_URL = BASE_URL.concat("#experience")
