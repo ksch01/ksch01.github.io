@@ -149,8 +149,8 @@ function getSecondDigit(value: number) : string {
                                 mo
                             </div>
                             <div>
-                                <FlipDigit :value="getFirstDigit(date.getDay())"/>
-                                <FlipDigit :value="getSecondDigit(date.getDay())"/>
+                                <FlipDigit :value="getFirstDigit(date.getDate())"/>
+                                <FlipDigit :value="getSecondDigit(date.getDate())"/>
                                 d
                             </div>
                         </div>
