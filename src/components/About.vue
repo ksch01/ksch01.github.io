@@ -4,11 +4,11 @@
 <template>
     <div class="content">
         <section id="about" class="about">
-            <h1>Hallo, ich bin Kevin.</h1>
-            <p>
+            <h1 class="heroHeader">Hallo, ich bin Kevin.</h1>
+            <p class="firstText">
                 Softwareentwickler mit einer Leidenschaft für interaktive Echtzeitanwendungen und durchdachte Nutzererfahrungen.
             </p>
-            <p>
+            <p class="secondText">
                 Besonders gerne entwickle ich Anwendungen, die unmittelbar auf die Interaktion ihrer Nutzer reagieren – 
                 von Videospielen bis hin zu komplexen interaktiven Systemen. Dabei beschäftige ich mich genauso gerne mit der technischen Umsetzung 
                 wie mit der Frage, wie sich eine Anwendung intuitiv und angenehm bedienen lässt.
@@ -19,17 +19,36 @@
 
 <style scoped>
 
-@media (min-width: 700px) {
-    .about {
-        margin-left: 4rem;
-        margin-right: 4rem;
+.heroHeader {
+    margin-left: 0;
+}
+
+.heroHeader, .firstText, .secondText {
+    animation: fadeIn 600ms ease-in-out 100ms both;
+}
+
+.firstText {
+    animation-delay: 250ms;
+}
+
+.secondText {
+    animation-delay: 400ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .heroHeader, .firstText, .secondText {
+        animation: none;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 600px) {
+    .heroHeader {
+        margin-left: 1em;
+    }
+
     .about {
-        margin-top: 8rem;
-        margin-bottom: 8rem;
+        margin: 8rem 4rem;
     }
 }
+
 </style>
