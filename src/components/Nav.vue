@@ -110,10 +110,10 @@ function isSection(section: string) : boolean{
       <template v-slot:content>
         <nav class="navMobile">
           <ul id="ulNavPages" class="ulNav">
-            <NavLink title="Start" :href="START_URL"/>
-            <NavLink title="Porjekte" :href="PROJECTS_URL"/>
-            <NavLink title="Erfahrung" :href="EXPERIENCE_URL"/>
-            <NavLink title="Kontakt" :href="CONTACT_URL"/>
+            <NavLink title="Start" :href="START_URL" router-link/>
+            <NavLink title="Porjekte" :href="PROJECTS_URL" router-link/>
+            <NavLink title="Erfahrung" :href="EXPERIENCE_URL" router-link/>
+            <NavLink title="Kontakt" :href="CONTACT_URL" router-link/>
           </ul>
           <ul id="ulNavSocials" class="ulNav">
             <NavLink title="" :href="GITHUB_URL">
