@@ -10,6 +10,8 @@
   --color-dark-link: #324fff;
   --color-light-link: #3112c3;
   --color-light-link-highlighted: #324fff;
+
+  --color-placeholder: #c9c9c9;
 }
 
 html {
@@ -167,61 +169,16 @@ ul > li {
   text-align: center;
 }
 
-.divVideo {
-  position: relative;
-  display: inline-block;
-
-  border-radius: 1rem;
-}
-
-video {
-  border-radius: inherit;
-
-  display: block;
-
-  width: 100%;
-  height: auto;
-}
-
-.divVideoOverlay {
-  position: absolute;
-  inset: 0;
-
-  border-radius: inherit;
-  background: rgba(0, 0, 0, 0.5);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  opacity: 0;
-  transition: opacity 400ms ease-in-out;
-
-  pointer-events: none;
-}
-
-.svgVideoMaximize {
-  scale: .1;
-  transition: scale 200ms ease-in-out;
-}
-
-.divVideo:hover {
-  cursor: pointer;
-}
-
-.divVideo:hover .divVideoOverlay {
-    opacity: 1;
-}
-.divVideo:hover .divVideoOverlay .svgVideoMaximize{
-    scale: 1
-}
-
 .modalContent {
     padding: 0 1rem;
 }
 
 .modalVideo {
-    border-radius: 0;
+  border-radius: 0;
+}
+
+.invisible {
+  display: none !important;
 }
 
 .modalBody .modalVideo {
@@ -276,4 +233,13 @@ section {
 		opacity: 1;
     transform: 0;
 	}
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .2;
+  }
 }

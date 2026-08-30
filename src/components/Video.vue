@@ -7,9 +7,10 @@ const props = defineProps<{
 
 const video = ref<HTMLVideoElement | null>(null)
 const slots = useSlots()
-
+const loaded = ref<boolean>(false)
 
 function maximize(){
+  if(loaded.value)
     video.value?.requestFullscreen()
 }
 
@@ -17,14 +18,18 @@ function hasDescription() : boolean {
   return !!slots.description;
 }
 
+function onVideoLoaded() {
+  loaded.value = true
+}
+
 </script>
 
 <template>
-    <div class="divVideo" @click="maximize">
-        <video ref="video" autoplay muted loop playsinline preload="metadata">
+    <div class="divVideo" :class="{placeholder: !loaded}" @click="maximize">
+        <video :class="{loaded}" ref="video" autoplay muted loop playsinline preload="metadata" @canplay="onVideoLoaded">
             <source :src=src type="video/webm">
         </video>
-        <div class="divVideoOverlay" style="color: white">
+        <div class="divVideoOverlay" :class="{invisible: !loaded}" style="color: white">
             <svg class="svgVideoMaximize" xmlns="http://www.w3.org/2000/svg" width="2em" fill="currentColor" viewBox="0 0 32 32">
               <defs id="defs1" />
               <g id="layer1">
@@ -53,5 +58,66 @@ function hasDescription() : boolean {
 </template>
 
 <style scoped>
+.divVideo {
+  position: relative;
+  display: inline-block;
 
+  border-radius: 1rem;
+
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.divVideo.placeholder {
+  background-color: var(--color-placeholder);
+  animation: pulse 1000ms ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+video {
+  border-radius: inherit;
+
+  display: none;
+
+  width: 100%;
+  height: auto;
+}
+
+video.loaded {
+  display: block;
+}
+
+.divVideoOverlay {
+  position: absolute;
+  inset: 0;
+
+  border-radius: inherit;
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
+
+  pointer-events: none;
+}
+
+.svgVideoMaximize {
+  scale: .1;
+  transition: scale 200ms ease-in-out;
+}
+
+.divVideo:hover {
+  cursor: pointer;
+}
+
+.divVideo:hover .divVideoOverlay {
+    opacity: 1;
+}
+.divVideo:hover .divVideoOverlay .svgVideoMaximize{
+    scale: 1
+}
 </style>
