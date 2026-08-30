@@ -8,7 +8,7 @@ const props = defineProps<{start: string, end: string}>()
     <div class="time">
         <h2>
             <span>{{ start }}</span>
-            <span>–</span> 
+            <span> – </span> 
             <span>{{ end }}</span>
         </h2>
     </div>
