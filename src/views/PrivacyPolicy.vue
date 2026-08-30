@@ -26,14 +26,16 @@
         <h2>3. Ihre Datenschutzrechte</h2>
         <p>
             Sie haben im Rahmen der gesetzlichen Voraussetzungen insbesondere folgende Rechte:
-            <ul>
-                <li>Recht auf Auskunft über die zu Ihrer Person verarbeiteten Daten gemäß Art. 15 DSGVO</li>
-                <li>Recht auf Berichtigung gemäß Art. 16 DSGVO</li>
-                <li>Recht auf Löschung gemäß Art. 17 DSGVO</li>
-                <li>Recht auf Einschränkung der Verarbeitung gemäß Art. 18 DSGVO</li>
-                <li>Recht auf Datenübertragbarkeit gemäß Art. 20 DSGVO</li>
-                <li>Recht auf Widerspruch gegen bestimmte Verarbeitungen gemäß Art. 21 DSGVO</li>
-            </ul>
+        </p>
+        <ul>
+            <li>Recht auf Auskunft über die zu Ihrer Person verarbeiteten Daten gemäß Art. 15 DSGVO</li>
+            <li>Recht auf Berichtigung gemäß Art. 16 DSGVO</li>
+            <li>Recht auf Löschung gemäß Art. 17 DSGVO</li>
+            <li>Recht auf Einschränkung der Verarbeitung gemäß Art. 18 DSGVO</li>
+            <li>Recht auf Datenübertragbarkeit gemäß Art. 20 DSGVO</li>
+            <li>Recht auf Widerspruch gegen bestimmte Verarbeitungen gemäß Art. 21 DSGVO</li>
+        </ul>
+        <p>
             Sofern eine Verarbeitung auf Ihrer Einwilligung beruht, haben Sie das Recht, diese Einwilligung jederzeit mit Wirkung für die Zukunft zu widerrufen.
         </p>
         <p>
