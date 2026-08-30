@@ -1,10 +1,5 @@
 <script setup lang="ts">
 import Nav from './components/Nav.vue'
-import About from './components/About.vue'
-import Contact from './components/Contact.vue'
-import Experience from './components/Experience.vue';
-import Projects from './components/Projects.vue';
-
 </script>
 
 <template>
@@ -13,10 +8,7 @@ import Projects from './components/Projects.vue';
   </header>
 
   <main>
-    <About/>
-    <Projects/>
-    <Experience/>
-    <Contact/>
+    <RouterView />
   </main>
 
   <footer>
