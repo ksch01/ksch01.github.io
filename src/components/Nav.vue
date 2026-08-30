@@ -1,21 +1,44 @@
 <script setup lang="ts">
-import githubIcon from "@/assets/icons/github.svg"
 import Expandable from './Expandable.vue'
 import NavLink from './NavLink.vue'
 import { START_URL, PROJECTS_URL, EXPERIENCE_URL, CONTACT_URL, LINKEDIN_URL, GITHUB_URL } from '@/const.ts'
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick, watch } from 'vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 
 const menuOpen = ref(false)
 
 const activeSection = ref('about')
 
-let observer: IntersectionObserver
+let observer: IntersectionObserver | null = null
+let headerHeight = 0;
+
+watch(
+    () => route.name,
+    () => createSectionObserver(),
+    { immediate: true }
+)
 
 onMounted(() => {
     const header = document.querySelector('header')
-    const headerHeight = header?.getBoundingClientRect().height ?? 0
+    headerHeight = header?.getBoundingClientRect().height ?? 0
+})
+
+onUnmounted(() => {
+    observer?.disconnect()
+})
+
+async function createSectionObserver(){
+    observer?.disconnect()
+
+    await nextTick()
 
     const sections = document.querySelectorAll('section[id]')
+
+    if (!sections.length) {
+        return
+    }
 
     observer = new IntersectionObserver(
         (entries) => {
@@ -33,12 +56,8 @@ onMounted(() => {
         }
     )
 
-    sections.forEach(section => observer.observe(section))
-})
-
-onUnmounted(() => {
-    observer?.disconnect()
-})
+    sections.forEach(section => observer!.observe(section))
+}
 
 function isSection(section: string) : boolean{
   return activeSection.value === section
