@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Main from '@/views/MainView.vue'
 import Imprint from '@/views/ImprintView.vue'
 import Privacy from '@/views/PrivacyPolicy.vue'
@@ -10,7 +10,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
   scrollBehavior(to) {
     if (to.hash) {
