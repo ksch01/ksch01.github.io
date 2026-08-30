@@ -67,15 +67,15 @@ function isSection(section: string) : boolean{
 <template>
   <nav class="content desktop">
     <ul id="ulNavPages" class="ulNav">
-      <NavLink title="Start" :href="START_URL" :active="isSection('about')">
+      <NavLink title="Start" :href="START_URL" :active="isSection('about')" router-link>
           <svg class="svgNav" viewBox="0 0 32 32" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <path id="rect1" d="M 0,0 V 32.000114 H 16.000057 V 15.957166 A 16,16 0 0 0 0,0 Z" />
             <path id="path2" d="m 41.671022,12.156708 2e-6,17.941229 0,17.941227 -15.53756,-8.970613 -15.537559,-8.970613 15.537559,-8.970616 z" transform="matrix(0.51488136,0,0,0.89180072,10.544366,-10.841361)" />
           </svg>
       </NavLink>
-      <NavLink title="Porjekte" :href="PROJECTS_URL" :active="isSection('projects')"/>
-      <NavLink title="Erfahrung" :href="EXPERIENCE_URL" :active="isSection('experience')"/>
-      <NavLink title="Kontakt" :href="CONTACT_URL" :active="isSection('contact')"/>
+      <NavLink title="Porjekte" :href="PROJECTS_URL" :active="isSection('projects')" router-link/>
+      <NavLink title="Erfahrung" :href="EXPERIENCE_URL" :active="isSection('experience')" router-link/>
+      <NavLink title="Kontakt" :href="CONTACT_URL" :active="isSection('contact')" router-link/>
     </ul>
     <ul id="ulNavSocials" class="ulNav">
       <NavLink title="" :href="GITHUB_URL">

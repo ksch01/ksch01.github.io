@@ -1,11 +1,21 @@
 <script setup lang="ts">
-defineProps(['href', 'title', 'active'])
+const props = defineProps<{
+  href: string,
+  title: string,
+  active?: boolean,
+  routerLink?: boolean
+}>()
 
 </script>
 
 <template>
     <li>
-        <a :href="href" :class="{active: active}">
+        <RouterLink v-if="routerLink" :to="href" :class="{active: active}">
+            <slot/>
+            <div v-if="title !== ''">{{ title }}</div>
+            <slot name="right"/>
+        </RouterLink>
+        <a v-else :href="href" :class="{active: active}">
             <slot/>
             <div v-if="title !== ''">{{ title }}</div>
             <slot name="right"/>

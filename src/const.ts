@@ -23,10 +23,10 @@ import influxdbIcon from "@/assets/icons/influxdb.svg"
 import grafanaIcon from "@/assets/icons/grafana.svg"
 
 export const BASE_URL = import.meta.env.VITE_BASE_URL
-export const START_URL = BASE_URL.concat("#")
-export const PROJECTS_URL = BASE_URL.concat("#projects")
-export const EXPERIENCE_URL = BASE_URL.concat("#experience")
-export const CONTACT_URL = BASE_URL.concat("#contact")
+export const START_URL = "/"
+export const PROJECTS_URL = "/#projects"
+export const EXPERIENCE_URL = "/#experience"
+export const CONTACT_URL = "/#contact"
 
 export const MAILTO = "mailto:2001kevin.schmidt@gmail.com";
 
