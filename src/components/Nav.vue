@@ -60,7 +60,7 @@ async function createSectionObserver(){
 }
 
 function isSection(section: string) : boolean{
-  return activeSection.value === section
+  return route.name === "Home" && activeSection.value === section
 }
 </script>
 
