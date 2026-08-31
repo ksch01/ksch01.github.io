@@ -15,4 +15,13 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  build: {
+    rollupOptions: {
+      input: {
+        main: fileURLToPath(new URL('./index.html', import.meta.url)),
+        impressum: fileURLToPath(new URL('./impressum/index.html', import.meta.url)),
+        datenschutz: fileURLToPath(new URL('./datenschutz/index.html', import.meta.url)),
+      },
+    },
+  },
 })

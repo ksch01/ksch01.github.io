@@ -2,10 +2,7 @@
 import Expandable from './Expandable.vue'
 import NavLink from './NavLink.vue'
 import { START_URL, PROJECTS_URL, EXPERIENCE_URL, CONTACT_URL, LINKEDIN_URL, GITHUB_URL } from '@/const.ts'
-import { ref, onMounted, onUnmounted, nextTick, watch } from 'vue'
-import { useRoute } from 'vue-router'
-
-const route = useRoute()
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 
 const menuOpen = ref(false)
 
@@ -14,15 +11,10 @@ const activeSection = ref('about')
 let observer: IntersectionObserver | null = null
 let headerHeight = 0;
 
-watch(
-    () => route.name,
-    () => createSectionObserver(),
-    { immediate: true }
-)
-
 onMounted(() => {
     const header = document.querySelector('header')
     headerHeight = header?.getBoundingClientRect().height ?? 0
+    createSectionObserver()
 })
 
 onUnmounted(() => {
@@ -60,22 +52,22 @@ async function createSectionObserver(){
 }
 
 function isSection(section: string) : boolean{
-  return route.name === "Home" && activeSection.value === section
+  return activeSection.value === section
 }
 </script>
 
 <template>
   <nav class="content desktop">
     <ul id="ulNavPages" class="ulNav">
-      <NavLink title="Start" :href="START_URL" :active="isSection('about')" router-link>
+      <NavLink title="Start" :href="START_URL" :active="isSection('about')">
           <svg class="svgNav" viewBox="0 0 32 32" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <path id="rect1" d="M 0,0 V 32.000114 H 16.000057 V 15.957166 A 16,16 0 0 0 0,0 Z" />
             <path id="path2" d="m 41.671022,12.156708 2e-6,17.941229 0,17.941227 -15.53756,-8.970613 -15.537559,-8.970613 15.537559,-8.970616 z" transform="matrix(0.51488136,0,0,0.89180072,10.544366,-10.841361)" />
           </svg>
       </NavLink>
-      <NavLink title="Porjekte" :href="PROJECTS_URL" :active="isSection('projects')" router-link/>
-      <NavLink title="Erfahrung" :href="EXPERIENCE_URL" :active="isSection('experience')" router-link/>
-      <NavLink title="Kontakt" :href="CONTACT_URL" :active="isSection('contact')" router-link/>
+      <NavLink title="Porjekte" :href="PROJECTS_URL" :active="isSection('projects')"/>
+      <NavLink title="Erfahrung" :href="EXPERIENCE_URL" :active="isSection('experience')"/>
+      <NavLink title="Kontakt" :href="CONTACT_URL" :active="isSection('contact')"/>
     </ul>
     <ul id="ulNavSocials" class="ulNav">
       <NavLink title="" :href="GITHUB_URL">
@@ -110,10 +102,10 @@ function isSection(section: string) : boolean{
       <template v-slot:content>
         <nav class="navMobile">
           <ul id="ulNavPages" class="ulNav">
-            <NavLink title="Start" :href="START_URL" router-link/>
-            <NavLink title="Porjekte" :href="PROJECTS_URL" router-link/>
-            <NavLink title="Erfahrung" :href="EXPERIENCE_URL" router-link/>
-            <NavLink title="Kontakt" :href="CONTACT_URL" router-link/>
+            <NavLink title="Start" :href="START_URL"/>
+            <NavLink title="Porjekte" :href="PROJECTS_URL"/>
+            <NavLink title="Erfahrung" :href="EXPERIENCE_URL"/>
+            <NavLink title="Kontakt" :href="CONTACT_URL"/>
           </ul>
           <ul id="ulNavSocials" class="ulNav">
             <NavLink title="" :href="GITHUB_URL">

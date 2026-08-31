@@ -1,17 +1,7 @@
 <script setup lang="ts">
-import Nav from './components/Nav.vue'
 </script>
 
 <template>
-  <header>
-    <Nav/>
-  </header>
-
-  <main>
-    <RouterView />
-  </main>
-
-  <footer>
     <div class="content">
       <div class="footerContent">
         <p class="footerStart">
@@ -26,37 +16,17 @@ import Nav from './components/Nav.vue'
         </p>
       </div>
       <div class="footerLinks">
-        <RouterLink to="/impressum">Impressum</RouterLink>
-        <RouterLink to="/datenschutz">Datenschutz</RouterLink>
+        <a href="/impressum/">Impressum</a>
+        <a href="/datenschutz/">Datenschutz</a>
       </div>
     </div>
-  </footer>
 </template>
 
 <style scoped>
+
 .footerStart {
   text-align: right;
   display: none;
-}
-
-header {
-  position: sticky;
-  top: 0;
-
-  display: flex;
-  line-height: 1.5;
-  background-color: var(--color-primary);
-  padding: 0;
-
-  z-index: 1000000;
-}
-
-footer {
-  color: var(--color-secondary);
-  background-color: var(--color-primary);
-  padding: 0;
-
-  margin-top: 3rem;
 }
 
 .footerLinks {
@@ -94,13 +64,6 @@ footer {
   aspect-ratio: 1;
 }
 
-main {
-  background-color: var(--color-secondary);
-  min-height: 100%;
-  max-height: 100%;
-  flex: 1;
-}
-
 .footerEnd {
   min-width: 0;
   display: flex;
@@ -121,19 +84,6 @@ main {
 
   .footerContent {
     grid-template-columns: 1fr auto 1fr;
-  }
-}
-
-@media (min-width: 1024px) {
-  header {
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
   }
 }
 </style>

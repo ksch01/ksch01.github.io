@@ -2,20 +2,14 @@
 const props = defineProps<{
   href: string,
   title: string,
-  active?: boolean,
-  routerLink?: boolean
+  active?: boolean
 }>()
 
 </script>
 
 <template>
     <li>
-        <RouterLink v-if="routerLink" :to="href" :class="{active: active}">
-            <slot/>
-            <div v-if="title !== ''">{{ title }}</div>
-            <slot name="right"/>
-        </RouterLink>
-        <a v-else :href="href" :class="{active: active}">
+        <a :href="href" :class="{active: active}">
             <slot/>
             <div v-if="title !== ''">{{ title }}</div>
             <slot name="right"/>
