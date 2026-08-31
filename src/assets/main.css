@@ -70,6 +70,7 @@ h1 {
 h2 {
   font-weight: 500;
   letter-spacing: -0.02em;
+  margin-top: 2em;
 }
 
 h3 {
@@ -110,7 +111,6 @@ h1.hSection::after {
 
 h2.hSubsection {
   text-align: center;
-  margin-top: 2em;
 }
 
 h3.hSubsubsection {
