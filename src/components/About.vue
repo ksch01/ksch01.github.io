@@ -20,7 +20,7 @@
 <style scoped>
 
 .heroHeader {
-    margin-left: 0;
+    padding-left: 0;
 }
 
 .heroHeader, .firstText, .secondText {
@@ -43,11 +43,11 @@
 
 @media (min-width: 600px) {
     .heroHeader {
-        margin-left: 1em;
+        padding-left: 1em;
     }
 
     .about {
-        margin: 8rem 4rem;
+        padding: 8rem 4rem;
     }
 }
 
