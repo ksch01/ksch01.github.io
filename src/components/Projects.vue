@@ -7,11 +7,11 @@ import Video from "./Video.vue"
 
 <template>
     <section id="projects">
-    <h1 class="hSection">Projekte</h1>
+    <h2 class="hSection">Projekte</h2>
 
-    <h2 class="hSubsection">Just Playing Cards (Arbeitstitel)</h2>
+    <h3 class="hSubsection">Just Playing Cards (Arbeitstitel)</h3>
     <Video :src="justplayingcardssample"/>
-    <h3 class="hSubsubsection">Idee</h3>
+    <h4 class="hSubsubsection">Idee</h4>
     <p>
         Bei meinem aktuellen Projekt handelt es sich um ein kleines Computerspiel, das auf einer simplen Idee basiert. 
         Statt Spielern begrenzte Möglichkeiten oder Züge zur Verfügung zu stellen, lassen sich die Karten eines Kartendecks frei bewegen, drehen, stapeln und ziehen.
@@ -22,7 +22,7 @@ import Video from "./Video.vue"
         diese Idee sauber umzusetzen und gleichzeitig Erfahrungen mit den dabei eingesetzten Technologieen zu sammeln. Denn die Umsetzung basiert nicht auf einer
         High-Level-Game-Engine sondern lediglich auf einer eigenen Vulkan-Implementierung um das Maximum an Kontrolle und Performance zu ermöglichen.
     </p>
-    <h3 class="hSubsubsection">Tech<!-- & Meinungen --></h3>
+    <h4 class="hSubsubsection">Tech<!-- & Meinungen --></h4>
     <p>
         Die Umsetzung basiert auf der Programmiersprache C. Für die Grafikentwicklung habe ich mich dabei für Vulkan entschieden. Weitere Abhängigkeiten
         liegen bei cglm als Mathematikbibliothek für Vektor- und Matrixoperationen die in der Computergrafik genutzt werden sowie GLFW zur Verwaltung des Fensters. 
@@ -44,7 +44,7 @@ import Video from "./Video.vue"
         eine eigene kleine Abstraktionsschicht um die Vulkan-Funktionalität herum aufzubauen.
     </p>
     -->
-    <h3 class="hSubsubsection">Status</h3>
+    <h4 class="hSubsubsection">Status</h4>
     <p>
         Ich plane, das Spiel zu einem bisher unbestimmten Zeitpunkt auf Steam zu veröffentlichen. Aktuell befindet es sich noch in Entwicklung. Ein großer Teil der Funktionalitäten 
         außerhalb des Mehrspielermodus ist bereits umgesetzt, sodass schon eine spielbare Version existiert, wie sie im Video oben zu sehen ist. Die nächsten Schritte umfassen die Entwicklung 

@@ -66,7 +66,7 @@ function getSecondDigit(value: number) : string {
 
 <template>
     <section id="experience">
-    <h1 class="hSection">Erfahrung</h1>
+    <h2 class="hSection">Erfahrung</h2>
     
     <Toggle v-model="collapsed">
         <template v-slot:pre>
@@ -120,7 +120,7 @@ function getSecondDigit(value: number) : string {
         </Timeline>
     </template>
     <template v-else>
-        <h2 class="hSubsection">Schulbildung</h2>
+        <h3 class="hSubsection">Schulbildung</h3>
         <Hero side="left">
             <template v-slot:left>
                 <p>
@@ -177,7 +177,7 @@ function getSecondDigit(value: number) : string {
             Mein Abitur absolvierte ich 2019 an derselben Schule mit der Note 2,5. Ich belegte den Grundkurs Informatik, den ich mit durchschnittlich 10,5 Punkten, also einer 2-, abschloss. 
             Zu dieser Zeit programmierte ich ausschließlich mit Java und lernte hauptsächlich das Programmieren selbst kennen. Von Software Engineering konnte hier noch nicht die Rede sein.
         </p>
-        <h2 class="hSubsection">Studium</h2>
+        <h3 class="hSubsection">Studium</h3>
         <Hero side="right">
             <template v-slot:left>
                 <IconGelly :techs="studTechs" style="font-size: 3rem"/>
@@ -198,7 +198,7 @@ function getSecondDigit(value: number) : string {
             </template>
         </Hero>
 
-        <h2 class="hSubsection">SkyGate Internetworking GmbH</h2>
+        <h3 class="hSubsection">SkyGate Internetworking GmbH</h3>
         <p> 
             Ich absolvierte mein Pflichtpraktikum bei der Internetagentur SkyGate Internetworking GmbH über drei Monate in Vollzeit. Anschließend arbeitete ich insgesamt zwei Jahre und sechs Monate als Werkstudent während meines Studiums sowie weitere 
             sechs Monate zwischen meinem Bachelor- und Masterstudium mit einer Arbeitszeit von 32 Stunden pro Woche. Insgesamt war ich von Februar 2023 bis Mai 2026 bei SkyGate tätig und damit über drei Jahre im Unternehmen. 
