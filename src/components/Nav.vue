@@ -84,7 +84,7 @@ function isSection(section: string) : boolean{
   </nav>
 
   <div class="content mobile">
-    <Expandable v-model="menuOpen">
+    <Expandable v-model="menuOpen" :aria-label="menuOpen ? 'Navigation schließen' : 'Navigation öffnen'">
       <template v-slot:header>
         <div class="header">
           <svg class="svgNav" viewBox="0 0 32 32" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg">

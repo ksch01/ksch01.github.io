@@ -12,14 +12,18 @@ function set(value: boolean){
 </script>
 
 <template>
-    <div class="divToggle">
-        <div class="pre" @click="set(false)">
-            <slot name="pre"/>
-        </div>
-        <button :class="{toggled: model}" @click="toggle"/>
-        <div class="post" @click="set(true)">
-            <slot name="post"/>
-        </div>
+    <div class="divToggle" role="group" aria-label="Option auswählen">
+        <button type="button" class="pre" :class="{ active: !model }" :aria-pressed="!model" @click="set(false)">
+            <label>
+                <slot name="pre" />
+            </label>
+        </button>
+        <button class="toggle" :class="{toggled: model}" @click="toggle" :aria-label="model ? 'Auf Option 1 wechseln' : 'Auf Option 2 wechseln'"/>
+        <button type="button" class="post" :class="{ active: model }" :aria-pressed="model" @click="set(true)">
+            <label>
+                <slot name="post"/>
+            </label>
+        </button>
     </div>
 </template>
 
@@ -36,8 +40,13 @@ function set(value: boolean){
     justify-self: left;
 }
 
-button, .pre:hover, .pre:hover *, .post:hover, .post:hover *{
-    cursor: pointer;
+button {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+    border: none;
+    background-color: transparent;
 }
 
 .divToggle {
@@ -48,7 +57,9 @@ button, .pre:hover, .pre:hover *, .post:hover, .post:hover *{
     align-items: center;
 }
 
-button {
+.toggle {
+    font-size: .8em;
+
     position: relative;
     overflow: visible;
 
@@ -64,7 +75,12 @@ button {
     transition: border-color 200ms ease-in-out;
 }
 
-button::before {
+.toggle:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.toggle::before {
     position: absolute;
 
     content: "";
@@ -85,14 +101,14 @@ button::before {
         background-color 200ms ease-in-out;
 }
 
-button:hover {
-    border-color: var(--color-font-highlight);
+.toggle:hover {
+    border-color: var(--color-secondary-highlight);
 }
-button:hover::before {
-    background-color: var(--color-font-highlight);
+.toggle:hover::before {
+    background-color: var(--color-secondary-highlight);
 }
 
-button.toggled::before{
+.toggle.toggled::before{
     transform: translateX(2em);
 }
 </style>

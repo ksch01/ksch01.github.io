@@ -1,5 +1,15 @@
 <script setup lang="ts">
-import { ref, useSlots } from 'vue';
+import { ref, useSlots, useId, onMounted } from 'vue';
+
+const props = defineProps<{contentId?: string, ariaLabel?:string}>()
+let contentId : string
+
+onMounted(() => {
+    if (props.contentId)
+        contentId = props.contentId
+    else 
+        contentId = useId()
+})
 
 const slots = useSlots()
 
@@ -69,11 +79,11 @@ function afterLeave(el: Element) {
 
 <template>
     <div class="expandable">
-        <div class="expandableHeader" @click="onClick">
-            <div class="expandableHeaderContent">
+        <button class="expandableHeader" :aria-expanded="expanded" :aria-label="ariaLabel" :aria-controls="contentId" @click="onClick">
+            <label class="expandableHeaderContent">
                 <slot name="header"/>
-            </div>
-            <div class="expandableIcon">
+            </label>
+            <span class="expandableIcon" aria-hidden="true">
                 <template v-if="slots.icon">
                     <slot name="icon"/>
                 </template>
@@ -81,10 +91,10 @@ function afterLeave(el: Element) {
                   <rect width="23.613272" height="3.3733244" x="-21.926609" y="20.940754" rx="1.6866622" transform="rotate(-45)" />
                   <rect width="23.613272" height="3.3733244" x="0.7008087" y="-1.6866628" rx="1.6866622" transform="rotate(45)" />
                 </svg>
-            </div>
-        </div>
+            </span>
+        </button>
         <Transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leave" :css="false">
-            <div v-show="expanded" class="expandableContent" ref="content">
+            <div v-show="expanded" :id="contentId" class="expandableContent" ref="content">
                 <div class="expandableContentInner">
                     <slot name="content"/>
                 </div>
@@ -103,13 +113,12 @@ function afterLeave(el: Element) {
     justify-content: space-between;
     gap: 1em;
 
-    color: var(--color-font);
+    width: 100%;
+
+    background-color: transparent;
+    border: none;
 
     transition: color 250ms;
-}
-.expandableHeader:hover {
-    color: var(--color-font-highlight);
-    cursor: pointer;
 }
 
 .expandableHeaderContent {
