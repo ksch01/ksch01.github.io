@@ -1,11 +1,13 @@
 <script setup lang="ts">
-
+import BackToHome from '@/components/BackToHome.vue';
 </script>
 
 <template>
     <div class="content">
+        <BackToHome/>
         <h1>Impressum</h1>
         <span>Angaben gemäß §5 DDG</span>
+        <h2>Verantwortlich</h2>
         <div class="imprintContent">
             <div class="address">
                 <p>Kevin Schmidt</p>
@@ -14,7 +16,7 @@
                 <p>Deutschland</p>
             </div>
         </div>
-        <h2>Kontakt:</h2>
+        <h2>Kontakt</h2>
         <div class="imprintContent">
             <div class="contact">
                 <p>E-Mail: <a href="mailto:2001kevin.schmidt@gmail.com">2001kevin.schmidt@gmail.com</a></p>

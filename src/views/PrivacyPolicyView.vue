@@ -1,9 +1,10 @@
 <script setup lang="ts">
-
+import BackToHome from '@/components/BackToHome.vue';
 </script>
 
 <template>
     <div class="content">
+        <BackToHome/>
         <h1>Datenschutzerklärung</h1>
 
         <h2>1. Allgemeine Informationen</h2>
