@@ -2,19 +2,17 @@
 </script>
 
 <template>
-    <div class="content">
-        <section id="about" class="about">
-            <h1 class="heroHeader">Hallo, ich bin Kevin.</h1>
-            <p class="firstText">
-                Softwareentwickler mit einer Leidenschaft für interaktive Echtzeitanwendungen und durchdachte Nutzererfahrungen.
-            </p>
-            <p class="secondText">
-                Besonders gerne entwickle ich Anwendungen, die unmittelbar auf die Interaktion ihrer Nutzer reagieren – 
-                von Videospielen bis hin zu komplexen interaktiven Systemen. Dabei beschäftige ich mich genauso gerne mit der technischen Umsetzung 
-                wie mit der Frage, wie sich eine Anwendung intuitiv und angenehm bedienen lässt.
-            </p>
-        </section>
-    </div>
+    <section id="about" class="about">
+        <h1 class="heroHeader">Hallo, ich bin Kevin.</h1>
+        <p class="firstText">
+            Softwareentwickler mit einer Leidenschaft für interaktive Echtzeitanwendungen und durchdachte Nutzererfahrungen.
+        </p>
+        <p class="secondText">
+            Besonders gerne entwickle ich Anwendungen, die unmittelbar auf die Interaktion ihrer Nutzer reagieren – 
+            von Videospielen bis hin zu komplexen interaktiven Systemen. Dabei beschäftige ich mich genauso gerne mit der technischen Umsetzung 
+            wie mit der Frage, wie sich eine Anwendung intuitiv und angenehm bedienen lässt.
+        </p>
+    </section>
 </template>
 
 <style scoped>
@@ -33,6 +31,7 @@
 
 .secondText {
     animation-delay: 400ms;
+    margin-bottom: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {

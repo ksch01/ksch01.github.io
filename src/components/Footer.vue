@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <div class="content">
+    <div class="content sideShadows">
       <div class="footerContent">
         <svg class="svgFooter" viewBox="0 0 32 32" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg">
           <path id="rect1" d="M 0,0 V 32.000114 H 16.000057 V 15.957166 A 16,16 0 0 0 0,0 Z" />

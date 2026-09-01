@@ -65,14 +65,13 @@ a::after {
         transparent 100%
     );
 
-    z-index: -1;
+    z-index: 100001;
 
     opacity: 0;
     transition: opacity 350ms ease-in-out;
 }
     
 a.active::after {
-
     opacity: 1;
 }
 

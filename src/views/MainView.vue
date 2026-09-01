@@ -7,8 +7,10 @@ import Projects from '@/components/Projects.vue';
 </script>
 
 <template>
-    <About/>
-    <Projects/>
-    <Experience/>
-    <Contact/>
+    <div class="content">
+        <About/>
+        <Projects/>
+        <Experience/>
+        <Contact/>
+    </div>
 </template>
