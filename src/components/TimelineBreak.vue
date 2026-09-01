@@ -4,13 +4,13 @@
 
 <template>
     <div class="empty"/>
-    <div class="content">
+    <div class="timelineContent">
         <slot/>
     </div>
 </template>
 
 <style scoped>
-.content {
+.timelineContent {
     width: calc(100% - 3em);
 
     grid-column: 2;
@@ -42,7 +42,7 @@
         right: 1em;
     }
 
-    .content {
+    .timelineContent {
         width: calc(100% - 2em);
         margin-left: 2em;
     }

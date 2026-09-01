@@ -57,7 +57,7 @@ function isSection(section: string) : boolean{
 </script>
 
 <template>
-  <nav class="content desktop">
+  <nav class="content desktop sideShadows">
     <ul id="ulNavPages" class="ulNav">
       <NavLink title="Start" :href="START_URL" :active="isSection('about')">
           <svg class="svgNav" viewBox="0 0 32 32" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg">

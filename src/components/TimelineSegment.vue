@@ -12,13 +12,13 @@ const props = defineProps<{start: string, end: string}>()
             <span>{{ end }}</span>
         </h2>
     </div>
-    <div class="content">
+    <div class="timelineContent">
         <slot/>
     </div>
 </template>
 
 <style scoped>
-.content {
+.timelineContent {
     position: relative;
     width: calc(100% - 3em);
 
@@ -26,6 +26,8 @@ const props = defineProps<{start: string, end: string}>()
 
     padding: 0;
     margin-left: 3em;
+
+    align-content: center;
 }
 
 .time {
@@ -57,7 +59,7 @@ const props = defineProps<{start: string, end: string}>()
     display: inline;
 }
 
-.content::before {
+.timelineContent::before {
     content: "";
     position: absolute;
 
@@ -94,12 +96,12 @@ const props = defineProps<{start: string, end: string}>()
         right: 1em;
     }
 
-    .content {
+    .timelineContent {
         width: calc(100% - 2em);
         margin-left: 2em;
     }
 
-    .content::before {
+    .timelineContent::before {
         display: none;
     }
 }
