@@ -9,7 +9,7 @@ import soundcommsample from "@/assets/videos/soundcomm-sample-1.mp4"
 </script>
 
 <template>
-    <h2 class="hSubsection">Projekte im Studium</h2>
+    <h3 class="hSubsection">Projekte im Studium</h3>
     <Expandable>
         <template v-slot:header>
             <div class="projectHeader">

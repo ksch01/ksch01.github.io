@@ -129,21 +129,13 @@ footer {
   background-color: var(--color-primary);
 }
 
+h1, h2, h3, h4 {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
 h1 {
   font-size: 2rem;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-}
-
-h2 {
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  margin-top: 2em;
-}
-
-h3 {
-  font-weight: 500;
-  letter-spacing: -0.02em;
 }
 
 .thin {
@@ -155,11 +147,12 @@ h3 {
   align-items: center;
 }
 
-h1.hSection {
+h2.hSection {
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 
-h1.hSection::before {
+h2.hSection::before {
   content: "";
   flex: 1;
   height: 1px;
@@ -168,7 +161,7 @@ h1.hSection::before {
   opacity: 1;
 }
 
-h1.hSection::after {
+h2.hSection::after {
   content: "";
   flex: 1;
   height: 1px;
@@ -177,11 +170,15 @@ h1.hSection::after {
   opacity: 1;
 }
 
-h2.hSubsection {
+h3.hSubsection {
+  font-size: 1.5rem;
+  margin-top: 4rem;
   text-align: center;
 }
 
-h3.hSubsubsection {
+h4.hSubsubsection {
+  font-size: 1.2rem;
+
   display: flex;
   position: relative;
   text-align: center;
@@ -192,7 +189,7 @@ h3.hSubsubsection {
   gap: 1rem;
 }
 
-h3.hSubsubsection::before{
+h4.hSubsubsection::before{
   content: "";
 
   height: 1px;
@@ -202,7 +199,7 @@ h3.hSubsubsection::before{
   opacity: 1;
 }
 
-h3.hSubsubsection::after{
+h4.hSubsubsection::after{
   content: "";
 
   height: 1px;
