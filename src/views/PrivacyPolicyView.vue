@@ -5,7 +5,7 @@ import BackToHome from '@/components/BackToHome.vue';
 <template>
     <div class="content">
         <BackToHome/>
-        <h1>Datenschutzerklärung</h1>
+        <h1>Datenschutz&shy;erklärung</h1>
 
         <h2>1. Allgemeine Informationen</h2>
         <p>
@@ -87,7 +87,7 @@ import BackToHome from '@/components/BackToHome.vue';
             Für die Verarbeitung personenbezogener Daten auf den verlinkten Websites ist der jeweilige Betreiber verantwortlich. Ich habe keinen Einfluss auf deren Datenverarbeitung.
         </p>
 
-        <h2>8. Gültigkeit und Änderung dieser Datenschutzerklärung</h2>
+        <h2>8. Gültigkeit und Änderung dieser Datenschutz&shy;erklärung</h2>
         <p>
             Diese Datenschutzerklärung tritt am 01.09.2026 in Kraft. Ich behalte mir vor, diese Erklärung bei Bedarf und unter Einhaltung der geltenden Datenschutzgesetze zu ändern. Dies kann beispielsweise erforderlich sein, um neuen rechtlichen Anforderungen gerecht zu werden oder um Änderungen an meiner Webseite oder neuen, über meine Webseite angebotenen Diensten zu berücksichtigen. Die jeweils aktuelle Version der Datenschutzerklärung, die zum Zeitpunkt Ihres Besuchs auf meiner Webseite abrufbar ist, ist bindend.
         </p>
