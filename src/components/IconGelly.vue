@@ -195,7 +195,7 @@ function render(time: number){
     <div class="divGellyIcons" ref="container" :style="{gridTemplateColumns: `repeat(${rowSize}, 1fr)`}">
         <template v-for="(tech, index) in techs">
             <div class="divGellyIcon">
-                <img class="imgGellyIcon" v-bind:src="tech.icon" :style="{gridColumn: getCol(index), gridRow: getRow(index)}">
+                <img class="imgGellyIcon" v-bind:src="tech.icon" :style="{gridColumn: getCol(index), gridRow: getRow(index)}" :alt="tech.title">
                 <span class="spanGellyIconLabel">{{ tech.title }}</span>
             </div>
         </template>
