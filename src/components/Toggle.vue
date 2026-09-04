@@ -68,7 +68,8 @@ button {
 
     margin: 0;
 
-    border: solid var(--color-font) 3px;
+    color: var(--color-primary);
+    border: solid currentColor 3px;
     border-radius: 1em;
 
     background: var(--color-secondary);
@@ -110,5 +111,9 @@ button {
 
 .toggle.toggled::before{
     transform: translateX(2em);
+}
+
+.toggle label {
+    color: var(--color-font);
 }
 </style>
