@@ -22,28 +22,13 @@ import Video from "./Video.vue"
         diese Idee sauber umzusetzen und gleichzeitig Erfahrungen mit den dabei eingesetzten Technologieen zu sammeln. Denn die Umsetzung basiert nicht auf einer
         High-Level-Game-Engine sondern lediglich auf einer eigenen Vulkan-Implementierung um das Maximum an Kontrolle und Performance zu ermöglichen.
     </p>
-    <h4 class="hSubsubsection">Tech<!-- & Meinungen --></h4>
+    <h4 class="hSubsubsection">Tech</h4>
     <p>
         Die Umsetzung basiert auf der Programmiersprache C. Für die Grafikentwicklung habe ich mich dabei für Vulkan entschieden. Weitere Abhängigkeiten
         liegen bei cglm als Mathematikbibliothek für Vektor- und Matrixoperationen die in der Computergrafik genutzt werden sowie GLFW zur Verwaltung des Fensters. 
         Im weiteren Verlauf der Entwicklung werden voraussichtlich noch weitere Abhängigkeiten hinzukommen, beispielsweise für die Kommunikation über das Netzwerk mittels TCP und UDP
         um den Mehrspielermodus umzusetzen.
     </p>
-    <!--
-    <p>
-        Für dieses Projekt programmierte ich tatsächlich das erste Mal in C. Und auch wenn das vielleicht eine kontroverse Meinung ist, muss ich sagen, dass C bisher
-        die beste Programmiersprache ist, mit der ich gearbeitet habe. Damit hängt C für mich sogar Größen wie Java, Python, C++ oder PHP ab, wobei man natürlich auch nach Anwendungsfall unterscheiden sollte. 
-        Nicht nur das Maß an Kontrolle welches man scheinbar hat, indem man Speicher manuell allokieren oder freigeben kann, sondern ebenso die Einfachheit und Homogenität des Sprachdesigns sind aus meiner Sicht 
-        Pluspunkte. High-Level-Features wie Generics, die mich in anderen Sprachen des Öfteren irritiert haben, gibt es nicht. Wodurch die Menge an unterschiedlichen, intuitiven Möglichkeiten ein Problem lösen, 
-        nochmals geringer ist.
-    </p>
-    <p>
-        Die Grafikprogrammierung und Vulkan gestaltet sich ebenfalls grundsätzlich angenehm. Wobei die Menge an Boilerplate, vor allem aufgrund der expliziten Konfiguration, z. B.
-        im Vergleich zu OpenGL, ein Dorn im Auge ist. Es ist also notwendig zu Beginn der Entwicklung eine große Menge an Vulkan Code zu schrieben bevor man irgend eine Art von visuellem
-        Feedback erhällt, was frustrierend sein kann. Bei der Menge an Konfiguration verliert man außerdem schnell den Überblick, weshalb es für nicht triviale Anwendungen praktisch sinnvoll ist, 
-        eine eigene kleine Abstraktionsschicht um die Vulkan-Funktionalität herum aufzubauen.
-    </p>
-    -->
     <h4 class="hSubsubsection">Status</h4>
     <p>
         Ich plane, das Spiel zu einem bisher unbestimmten Zeitpunkt auf Steam zu veröffentlichen. Aktuell befindet es sich noch in Entwicklung. Ein großer Teil der Funktionalitäten 
